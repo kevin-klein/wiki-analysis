@@ -2,9 +2,11 @@ import sqlite3
 import csv
 import networkx as nx
 import re
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 from networkx.readwrite import json_graph
 import json
+import networkx.algorithms.centrality
+import networkx.algorithms.community as cmt
 
 def dict_factory(cursor, row):
     d = {}
@@ -135,22 +137,34 @@ def read_json_file(filename):
     with open(filename) as f:
         js_graph = json.load(f)
     return json_graph.node_link_graph(js_graph)
-    
+
 if __name__ == '__main__':
-    changes = get_changes()
-    pages = get_pages()
+    G = read_json_file('graphs/graph_2017-08-22183008786189.json')
 
-    wikis_at_times = {}
+    bc = networkx.algorithms.betweenness_centrality(G)
 
-    for idx, change in enumerate(changes):
-        specific_wiki = {}
-        for page in changes[0:idx]:
-            specific_wiki[page.full_title()] = page
+    with open('betweenness_centrality.json', 'w') as f:
+        json.dump(bc, f, indent=4)
 
-        for page in pages:
-            specific_wiki[page.full_title()] = page
+    G.remove_edges_from(nx.selfloop_edges(G))
 
-        wikis_at_times[change.created_at] = specific_wiki
+    with open('core_numbers.json', 'w') as f:
+        json.dump(networkx.algorithms.core_number(G), f, indent=4)
 
-    p = Pool(8)
-    p.map(process_wiki_time, wikis_at_times.items())
+    # changes = get_changes()
+    # pages = get_pages()
+    #
+    # wikis_at_times = {}
+    #
+    # for idx, change in enumerate(changes):
+    #     specific_wiki = {}
+    #     for page in changes[0:idx]:
+    #         specific_wiki[page.full_title()] = page
+    #
+    #     for page in pages:
+    #         specific_wiki[page.full_title()] = page
+    #
+    #     wikis_at_times[change.created_at] = specific_wiki
+    #
+    # p = Pool(8)
+    # p.map(process_wiki_time, wikis_at_times.items())
