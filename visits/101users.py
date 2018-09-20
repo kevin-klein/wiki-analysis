@@ -8,7 +8,7 @@ pd.options.display.max_rows = 50
 pd.options.display.max_columns = 15
 pd.options.display.width = 500
 
-data = pd.read_csv("101users.csv")#.head(100)
+data = pd.read_csv("101users.csv")
 
 # data = pd.concat([data,  axis=1)
 data = data.apply(lambda x: pd.Series({**json.loads(x['properties']), **x}), axis=1)
@@ -39,18 +39,25 @@ page_grouped = data.groupby(['page']).size().sort_values()
 page_grouped.to_csv('page_views.csv')
 
 visit_history = data
+
 visit_history['time'] = visit_history['time'].astype("datetime64")
 
-visit_history.groupby([visit_history["time"].dt.year, visit_history["time"].dt.month, visit_history["time"].dt.day]).size().plot(kind="bar")
+visit_history.groupby([visit_history["time"].dt.year, visit_history["time"].dt.month]).size().plot(kind="line")
 
 plt.savefig("views_over_time.png")
 
-grouped_by_visit_id = data.groupby(['visit_id']).size().sort_values().to_frame('count').reset_index()
+data.groupby(['visit_id']).size().sort_values().to_frame('count').plot(kind='box')
+plt.show()
 
-grouped_by_count = grouped_by_visit_id.groupby(['count']).mean().reset_index()
-grouped_by_count.columns = ['count', 'average number of page views']
+print(data.groupby(['visit_id']).size().sort_values().to_frame('count').describe())
 
-grouped_by_count.to_csv('views_per_visit.csv')
+
+
+
+# grouped_by_count = grouped_by_visit_id.groupby(['count']).mean().reset_index()
+# grouped_by_count.columns = ['count', 'average number of page views']
+#
+# grouped_by_count.to_csv('views_per_visit.csv')
 
 
 
