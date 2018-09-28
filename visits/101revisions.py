@@ -10,7 +10,7 @@ pd.options.display.max_rows = 50
 pd.options.display.max_columns = 15
 pd.options.display.width = 500
 
-data = pd.read_csv("data/101users.csv").head(400)
+data = pd.read_csv("../data/101users.csv")
 
 # data = pd.concat([data,  axis=1)
 data = data.apply(lambda x: pd.Series({**json.loads(x['properties']), **x}), axis=1)
@@ -20,5 +20,10 @@ data = data[data['name'] == '$view']
 data = data[data['page'] != 'search']
 data = data[data['page'] != 'resource']
 data = data.drop('properties', axis=1)
+
+
+data = data.groupby(['page']).apply(lambda x : len(x['revision'].unique()))
+
+data = data.sort_values()
 
 print(data)
