@@ -10,7 +10,7 @@ pd.options.display.max_rows = 50
 pd.options.display.max_columns = 15
 pd.options.display.width = 500
 
-data = pd.read_csv("101users.csv")#.head(400)
+data = pd.read_csv("data/101users.csv")#.head(400)
 
 # data = pd.concat([data,  axis=1)
 data = data.apply(lambda x: pd.Series({**json.loads(x['properties']), **x}), axis=1)

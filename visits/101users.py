@@ -32,11 +32,11 @@ pt = pt.sort_values('rating')
 
 pt.rename(columns={True: 'once', False: 'more than once'}, inplace=True)
 
-pt.to_csv('page_ratings.csv')
+pt.to_csv('data/page_ratings.csv')
 
 page_grouped = data.groupby(['page']).size().sort_values()
 
-page_grouped.to_csv('page_views.csv')
+page_grouped.to_csv('data/page_views.csv')
 
 visit_history = data
 
@@ -44,7 +44,7 @@ visit_history['time'] = visit_history['time'].astype("datetime64")
 
 visit_history.groupby([visit_history["time"].dt.year, visit_history["time"].dt.month]).size().plot(kind="line")
 
-plt.savefig("views_over_time.png")
+plt.savefig("data/views_over_time.png")
 
 data.groupby(['visit_id']).size().sort_values().to_frame('count').plot(kind='box')
 plt.show()
