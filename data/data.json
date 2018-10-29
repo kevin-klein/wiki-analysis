@@ -8,6 +8,7 @@
                 "JSP": 0.00033710841686978866,
                 "CouchDB": 0.0,
                 "MongoDB": 1.0960045347417031e-05,
+                "Email": 0.0,
                 "Bottle": 0.00013411547437152717,
                 "CTest": 3.020421824412356e-06,
                 "Sinatra": 5.644157276488855e-05,
@@ -311,7 +312,6 @@
                 "Sesame": 0.0,
                 "Qt": 4.671058420088407e-05,
                 "Django": 5.944855632072068e-05,
-                "Email": 0.0,
                 "Querydsl": 0.0,
                 "Microservice": 0.0,
                 "USE": 0.0,
@@ -1672,9 +1672,6 @@
                 "org.antlr.runtime": 0.0,
                 "org.apache.tools.ant": 0.0
             },
-            " Technology": {
-                "Email": 0.0
-            },
             "Feature": {
                 "Grouping": 2.7315807831104724e-08,
                 "Serialization": 0.007279953397408421,
@@ -1958,7 +1955,6 @@
             "Property": 0.0005309199913204428,
             "101companies": 0.0,
             "Java": 0.0,
-            " Technology": 0.0,
             "Feature": 0.0024925062075867362,
             "Theme": 0.0004364540991749088,
             "Vocabulary": 0.0110837130293876,
@@ -1987,6 +1983,7 @@
                 "JSP": 0.00033011833281463546,
                 "CouchDB": 0.0,
                 "MongoDB": 1.3477582579599196e-05,
+                "Email": 0.0,
                 "Bottle": 0.00014678881950555355,
                 "CTest": 5.393582618412578e-06,
                 "Sinatra": 6.907169832957535e-05,
@@ -2290,7 +2287,6 @@
                 "Sesame": 0.0,
                 "Qt": 6.37380820438813e-05,
                 "Django": 7.756938839641587e-05,
-                "Email": 0.0,
                 "Querydsl": 0.0,
                 "Microservice": 0.0,
                 "USE": 0.0,
@@ -3651,9 +3647,6 @@
                 "org.antlr.runtime": 0.0,
                 "org.apache.tools.ant": 0.0
             },
-            " Technology": {
-                "Email": 0.0
-            },
             "Feature": {
                 "Grouping": 4.424437643072486e-08,
                 "Serialization": 0.008012913705298426,
@@ -3937,7 +3930,6 @@
             "Property": 0.0005645698272882779,
             "101companies": 0.0,
             "Java": 0.0,
-            " Technology": 0.0,
             "Feature": 0.0024621165932749134,
             "Theme": 0.0004946211785110114,
             "Vocabulary": 0.011205112609900399,
@@ -3966,6 +3958,7 @@
                 "JSP": 0.0037135278514588855,
                 "CouchDB": 0.0,
                 "MongoDB": 0.0015915119363395223,
+                "Email": 0.0,
                 "Bottle": 0.002652519893899204,
                 "CTest": 0.002122015915119363,
                 "Sinatra": 0.002122015915119363,
@@ -4269,7 +4262,6 @@
                 "Sesame": 0.0,
                 "Qt": 0.0015915119363395223,
                 "Django": 0.0015915119363395223,
-                "Email": 0.0,
                 "Querydsl": 0.0005305039787798408,
                 "Microservice": 0.0,
                 "USE": 0.0010610079575596816,
@@ -5630,9 +5622,6 @@
                 "org.antlr.runtime": 0.0005305039787798408,
                 "org.apache.tools.ant": 0.0
             },
-            " Technology": {
-                "Email": 0.0005305039787798408
-            },
             "Feature": {
                 "Grouping": 0.002122015915119363,
                 "Serialization": 0.007957559681697613,
@@ -5916,7 +5905,6 @@
             "Property": 0.002285247908590084,
             "101companies": 0.0,
             "Java": 0.0003315649867374005,
-            " Technology": 0.0005305039787798408,
             "Feature": 0.008088695496676908,
             "Theme": 0.006615696676548603,
             "Vocabulary": 0.012135278514588859,
@@ -5945,6 +5933,7 @@
                 "JSP": 6,
                 "CouchDB": 0,
                 "MongoDB": 3,
+                "Email": 0,
                 "Bottle": 4,
                 "CTest": 4,
                 "Sinatra": 4,
@@ -6248,7 +6237,6 @@
                 "Sesame": 0,
                 "Qt": 2,
                 "Django": 3,
-                "Email": 0,
                 "Querydsl": 1,
                 "Microservice": 0,
                 "USE": 2,
@@ -7609,9 +7597,6 @@
                 "org.antlr.runtime": 1,
                 "org.apache.tools.ant": 0
             },
-            " Technology": {
-                "Email": 1
-            },
             "Feature": {
                 "Grouping": 4,
                 "Serialization": 10,
@@ -7895,7 +7880,6 @@
             "Property": 3.1538461538461537,
             "101companies": 0.0,
             "Java": 0.625,
-            " Technology": 1.0,
             "Feature": 4.640449438202247,
             "Theme": 8.176470588235293,
             "Vocabulary": 2.375,
