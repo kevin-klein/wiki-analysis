@@ -165,6 +165,8 @@ def split_by_namespace(data):
         # print(key)
         namespace, title = key.split(':')
 
+        namespace = namespace.strip()
+
         result[namespace][title] = value
 
     return result
